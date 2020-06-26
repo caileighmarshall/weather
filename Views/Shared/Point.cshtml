@@ -1,0 +1,55 @@
+﻿@model weather.Models.PointModel
+
+@{
+    ViewData["Title"] = "Point";
+}
+
+<h1>Point</h1>
+@if (Model == null)
+{
+    <p>No Data</p>
+}
+else
+{
+    <table>
+        <tr>
+            <th>Column</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>Latitude</td>
+            <td>@Model.latitude</td>
+        </tr>
+        <tr>
+            <td>Longitude</td>
+            <td>@Model.longitude</td>
+        </tr>
+        <tr>
+            <td>Id</td>
+            <td>@Model.gridId</td>
+        </tr>
+        <tr>
+            <td>X</td>
+            <td>@Model.gridX</td>
+        </tr>
+        <tr>
+            <td>Y</td>
+            <td>@Model.gridY</td>
+        </tr>
+        <tr>
+            <td>Forecast Url</td>
+            <td>@Model.forecastUrl</td>
+        </tr>
+        <tr>
+            <td>Hourly Forecast Url</td>
+            <td>@Model.forecastHourlyUrl</td>
+        </tr>
+    </table>
+}
+
+@using (Html.BeginForm("Index", ""))
+{
+
+    <input type="submit" value="Return to Home" />
+
+} 

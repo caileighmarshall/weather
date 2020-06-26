@@ -1,0 +1,19 @@
+﻿@model weather.Models.WeatherModel
+
+@{
+    ViewData["Title"] = "Weather Forecast";
+}
+
+@if (Model == null)
+{
+    <p>No Data</p>
+}
+else
+{
+    @Model.forecastJson;
+}
+
+@using (Html.BeginForm("Index", ""))
+{
+    <input type="submit" value="Return to Home" />
+}

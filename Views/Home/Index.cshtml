@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <div class="text-center">
+        <h1 class="display-4">Weather reader API</h1>
+
+        <p>
+            1. Figure out your <a href="https://www.latlong.net/" target="_blank">Latitude & Longitude</a>.
+        </p>
+
+        <!--<p>
+        2. Input those values into the form to discover the API url for your location.
+        </p>
+
+        <form asp-controller="Home" asp-action="Point">
+            <p>
+                Latitude: <input id="latitude" type="text" style="padding: 8px 0px;" name="latitude" />
+                Longitude: <input id="longitude" type="text" style="padding: 8px 0px;" name="longitude" />
+                <input type="submit" class="button" value="Get Location Data" />
+            </p>
+        </form>
+        -->
+
+        <p>
+            3. Input forecast url into the form to receive weather forecast.
+        </p>
+
+        <form asp-controller="Home" asp-action="Weather">
+            <p>
+                Latitude: <input id="latitude" type="text" style="padding: 8px 0px;" name="latitude" />
+                Longitude: <input id="longitude" type="text" style="padding: 8px 0px;" name="longitude" />
+                <input type="submit" class="button" value="Get Forecast" />
+            </p>
+        </form>
+    </div>
